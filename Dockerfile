@@ -3,6 +3,8 @@ FROM --platform=${TARGETPLATFORM:-linux/amd64} alibaba-cloud-linux-3-registry.cn
 # 设置上海时区
 ENV TZ='Asia/Shanghai'
 
+COPY docker/yum.repos.d/*.repo /etc/yum.repos.d/
+
 RUN yum update -y
 
 # ps, top, uptime, w, free
