@@ -5,7 +5,7 @@ ENV TZ='Asia/Shanghai'
 
 COPY docker/yum.repos.d/*.repo /etc/yum.repos.d/
 
-RUN yum update -y
+#RUN yum update -y
 
 # ps, top, uptime, w, free
 # https://developer.aliyun.com/article/236238
@@ -29,3 +29,6 @@ RUN yum install -y --nogpgcheck dumb-init
 
 # python3
 #RUN yum install -y python3
+
+# 清理缓存
+RUN yum clean all
