@@ -38,8 +38,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{version}},version=${{ inputs.tags }}
-            type=semver,pattern={{major}}.{{minor}},version=${{ inputs.tags }}
+            type=semver,pattern={{version}},value=${{ inputs.tags }}
+            type=semver,pattern={{major}}.{{minor}},value=${{ inputs.tags }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
