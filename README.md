@@ -17,3 +17,7 @@ alinux3 版本 3.9
 # sh build.sh latest
 sh build.sh 3.9
 ```
+
+## 镜像标签
+
+* ```langfarm/alinux3:3.9```
